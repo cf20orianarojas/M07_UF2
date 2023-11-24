@@ -16,4 +16,11 @@ class SignController extends Controller
         $titol = $str1." ".$str2." ".$str3." ".$str4; // Iniciar sessió de l’usuari
         return view("signup")->with('titolLog', $titol); // Gestiona els valors passats per URL
     }
+    
+    public function signin2() {
+        return view('signin');
+    }
+    public function signup2() {
+        return view('signup');
+    }
 }

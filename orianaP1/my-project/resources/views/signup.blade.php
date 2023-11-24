@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1> {{ $titolLog }} </h1> <!-- Titol de la view amb els parametres de l'url definits al controlador -->
-    <form action="usuari.php" method="post">
+    <form action="{{ route('usuaris') }}" method="post">
+        @csrf
         <div>
             <label for="email">Email</label>
             <input type="text" name="email">
@@ -24,7 +25,7 @@
             <button type="submit" class="btn btn-primary" name="submit"> Enviar </button><br>
         </div>
         <div>
-            <a href="signin.blade.php">Crear d'usuari nou</a>
+            <a href="{{ route('signin') }}">Crear d'usuari nou</a>
         </div>
     </form>
 </body>

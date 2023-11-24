@@ -10,7 +10,8 @@
     <!-- <a href="../../../oriana/formulario.html"> Enllaç a la pràctica 3</a> -->
     <h1>{{ $titolReg }}</h1> <!-- Titol de la view amb els parametres de l'url definits al -->
     <div class="form">
-        <form action="../index.php" method="post">
+        <form action="{{ route('usuaris') }}"  method="post">
+            @csrf
             <div class="mb-3"> 
                 <label class="form-label" >Numero </label>
                 <input type="number" name="id">
@@ -45,7 +46,7 @@
             <button type="submit" class="btn btn-primary" name="submit">Enviar  </button>
         </form><br>
         <div>
-            <a href="signup.blade.php">Iniciar sessión de l'usuari</a>
+            <a href="{{ route('signup') }}">Iniciar sessión de l'usuari</a>
         </div>
     </div>    
 </body>
