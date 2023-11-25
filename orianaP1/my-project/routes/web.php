@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 // Controlador de rutes amb el prefix amb el meu nom y els parametres de cada ruta
 Route::prefix('oriana')->group(function () {
-    Route::get('signin/{str1}/{str2}/{str3}', [SignController::class, 'signin']);
-    Route::get('signup/{str1}/{str2}/{str3}/{str4}', [SignController::class, 'signup']);
+    Route::get('signin/{str1}/{str2}/{str3}/{str4}', [SignController::class, 'signin'])->name('signin');
+    Route::get('signup/{str1}/{str2}/{str3}', [SignController::class, 'signup'])->name('signup');
 });
 
 Route::prefix('oriana2')->group(function () {

@@ -11,9 +11,14 @@ class AdminController extends Controller
     public function centres() {
         return view('Admin.admin')->with(['result' => 'Aqui es mostraran els centres que el rol admin pot veura']);
     }
-    // datos de los formularios
+    
+    // Obte les dades del formulari de inici 
     public function usuaris(Request $request) {
-        $nom = $request->input('submit');
-        return view('Admin.admin')->with(['result' => 'Ruta usuaris']);
+    $email = $request->input('email');
+    $password = $request->input('password');
+
+    // Si els valors son iguals a les credencials de Admin, retornara la view admin
+    return $email == "orojas@iticbcn.cat" && $password == "12345" 
+                      ? view('Admin.admin') : view('signin'); 
     }
 }
