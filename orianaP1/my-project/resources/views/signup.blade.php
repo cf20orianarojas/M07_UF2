@@ -12,7 +12,6 @@
         <form action='{{ route("usuaris") }}' method="post">
             @csrf
 
-            <input type="hidden" name="_token" >
             <div class="mb-3"> 
                 <label class="form-label" >Numero </label>
                 <input type="number" name="id">
@@ -44,10 +43,10 @@
                 <label for="active"> Actiu </label>
                 <input type="checkbox" name="active">
             </div><br>
-            <button type="submit" class="btn btn-primary" name="submit">Enviar</button>
+            <button type="submit" class="btn btn-primary" name="submit">Sign up</button>
         </form><br>
         <div>
-            <a href="{{ route('signin') }}">Sign in</a>
+            <a href="{{ route('signin') }}">SIGN IN</a>
         </div>
     </div>    
 </body>

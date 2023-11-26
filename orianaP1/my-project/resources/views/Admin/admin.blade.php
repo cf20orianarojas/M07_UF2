@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ADMIN</title>
 </head>
 <body>
+    <!-- VISTA ADMIN -->
     <h1>BENVINGUT/DA ADMIN</h1>
     <div>
         <a href="{{ route('centres') }}">CENTRES</a>
-        <a href="#">PROFESSORAT</a>
-        <a href="#">ALUMNAT</a>
+        <a href="{{ route('professorat') }}">PROFESSORAT</a>
+        <a href="{{ route('alumnat') }}">ALUMNAT</a>
     </div><br>
-    <a href="{{ route('signin') }}">Log out</a>
+    <a href="{{ route('signin') }}">Log Out</a>
 </body>
 </html>

@@ -11,11 +11,11 @@
         @csrf
         <br>
         <div>
-            <label for="email">Email</label>
+            <label for="email">Email address</label>
             <input type="text" name="email">
         </div>
         <div>    
-            <label for="password">Contrassenya</label>
+            <label for="password">Password</label>
             <input type="password" name="password">
         </div>
         <div>
@@ -23,10 +23,10 @@
             <label> Remember me </label>
         </div><br>
         <div>
-            <button type="submit" class="btn btn-primary" name="submit"> Enviar </button><br>
+            <button type="submit" class="btn btn-primary" name="submit"> Sign in </button><br>
         </div>
         <div>
-            <a href="{{ route('signup') }}">Sign up</a>
+            <a href="{{ route('signup') }}">SIGN UP</a>
         </div>
     </form>
 </body>
